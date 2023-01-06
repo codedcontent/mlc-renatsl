@@ -1,5 +1,6 @@
 import Home from "./pages/Home";
 import LivingCost from "./pages/LivingCost";
+import Properties from "./pages/Properties";
 
 const App = () => {
   return (
@@ -7,6 +8,8 @@ const App = () => {
       <Home />
 
       <LivingCost />
+
+      <Properties />
     </div>
   );
 };

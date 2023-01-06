@@ -49,8 +49,8 @@ const LivingCost = () => {
         <img src={sectionImg} alt="sectionImg" className="W-12 bg-cover" />
 
         <div className="grid grid-cols-3 gap-10 place-content-center">
-          {livingFeatures.map((feature) => (
-            <div className="space-y-3 w-full">
+          {livingFeatures.map((feature, index) => (
+            <div className="space-y-3 w-full" key={index}>
               <div className="bg-white p-4 shadow-xl rounded-lg w-max">
                 <img
                   src={feature.icon}

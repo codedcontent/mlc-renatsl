@@ -13,6 +13,7 @@ module.exports = {
         "dm-sans": ["DM Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
       },
     },
   },
