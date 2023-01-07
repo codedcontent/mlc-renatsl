@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         accentColor: "#F4511E",
+        secondary: "#252B42",
       },
       backgroundImage: {
         "hero-pattern": "url(/hero img.png)",
