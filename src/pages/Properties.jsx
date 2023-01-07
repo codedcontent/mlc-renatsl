@@ -10,10 +10,11 @@ const Properties = () => {
       const API_KEY = import.meta.env.VITE_API_KEY;
       const BASE_URL = "https://api.unsplash.com";
       const numImages = 12;
+      const query = "resort";
 
       // Make a request to the /search/photos endpoint
       fetch(
-        `${BASE_URL}/search/photos?per_page=${numImages}&query=hotels&client_id=${API_KEY}`
+        `${BASE_URL}/search/photos?per_page=${numImages}&query=${query}&client_id=${API_KEY}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -24,11 +25,11 @@ const Properties = () => {
         });
     };
 
-    // getRentalImages();
+    getRentalImages();
   }, []);
 
   return (
-    <div className="h-screen w-full lg:p-24" id="#properties">
+    <div className="min-h-screen w-full lg:p-24" id="#properties">
       <div className="flex w-full items-center justify-between">
         <div className="w-max">
           <span className="text-2xl font-inter font-bold capitalize">
@@ -52,23 +53,23 @@ const Properties = () => {
       </div>
 
       <div className="rounded-lg border-2 border-gray-200 w-max mt-10 m-auto items-center justify-center grid grid-cols-5 divide-x-2 h-12">
-        <p className="bg-gray-100 font-medium font-poppins h-full px-5 flex justify-center items-center text-gray-400 cursor-pointer text-xs">
+        <p className="bg-gray-100 font-medium font-montserrat h-full px-5 flex justify-center items-center text-gray-400 cursor-pointer text-xs">
           First
         </p>
 
-        <p className="bg-white font-medium font-poppins h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
           1
         </p>
 
-        <p className="text-white font-medium font-poppins h-full px-5 flex justify-center items-center bg-accentColor cursor-pointer text-xs">
+        <p className="text-white font-medium font-montserrat h-full px-5 flex justify-center items-center bg-accentColor cursor-pointer text-xs">
           2
         </p>
 
-        <p className="bg-white font-medium font-poppins h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
           1
         </p>
 
-        <p className="bg-white font-medium font-poppins h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
           Last
         </p>
       </div>

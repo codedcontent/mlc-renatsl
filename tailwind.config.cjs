@@ -14,6 +14,7 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
