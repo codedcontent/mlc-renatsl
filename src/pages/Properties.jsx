@@ -10,7 +10,7 @@ const Properties = () => {
       const API_KEY = import.meta.env.VITE_API_KEY;
       const BASE_URL = "https://api.unsplash.com";
       const numImages = 12;
-      const query = "resort";
+      const query = "resort rooms";
 
       // Make a request to the /search/photos endpoint
       fetch(
