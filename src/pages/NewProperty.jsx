@@ -88,7 +88,7 @@ const NewProperty = () => {
 
   return (
     <div
-      className="min-h-screen w-full lg:px-24 grid place-items-center"
+      className="min-h-screen w-full lg:px-24 pb-10 grid place-items-center"
       id="#new-property"
     >
       <p className="text-semibold text-xl font-inter capitalize">
