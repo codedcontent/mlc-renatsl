@@ -52,6 +52,7 @@ const SelectDataTextField = ({ fieldName, required, error, placeholder }) => {
         <div className="absolute top-[105%] left-0 max-h-96 h-64 bg-gray-200 w-full rounded-md overflow-y-scroll"></div>
       </div>
 
+      {/* Error text */}
       {error && (
         <p
           className={`text-xs text-red-500 animate__animated ${errorStyle.error} pl-2 -mt-1.5`}
