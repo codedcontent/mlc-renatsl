@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import closeIcon from "../../assets/close_icon.svg";
 
 const PhotoTextField = ({
   fieldName,
@@ -8,7 +9,7 @@ const PhotoTextField = ({
   handleChange,
   formName,
 }) => {
-  const [imagesForPreview, setImagesForPreview] = useState(null);
+  const [imagesForPreview, setImagesForPreview] = useState([]);
 
   const [errorStyle, setErrorStyle] = useState({
     border: "border-gray-200",
@@ -31,7 +32,14 @@ const PhotoTextField = ({
       URL.createObjectURL(imageFile)
     );
 
-    console.log(imageUrls);
+    setImagesForPreview(imageUrls);
+  };
+
+  // Remove the selected image from preview
+  const removeImageFromReview = (selectImg) => {
+    setImagesForPreview((prev) => {
+      return [...prev.filter((imgUrl) => imgUrl !== selectImg)];
+    });
   };
 
   //   UseEffect tpo style the textfield in an error state
@@ -94,10 +102,34 @@ const PhotoTextField = ({
         </p>
       )}
 
-      <div className="w-full py-6 mt-4 border-2 border-gray-300">
-        <p className="font-light text-accentColor text-center font-poppins">
-          Preview of selected images appear here
-        </p>
+      <div
+        className={`w-full py-6 mt-4 border-4 border-gray-300 ${
+          imagesForPreview ||
+          (imagesForPreview.length > 0 && "max-h-[450px] overflow-y-scroll")
+        }`}
+      >
+        {!imagesForPreview || imagesForPreview.length <= 0 ? (
+          <p className="font-light text-accentColor text-center font-poppins">
+            Preview of selected images appear here
+          </p>
+        ) : (
+          <div className="grid grid-cols-2 auto-cols-fr px-4 gap-6">
+            {imagesForPreview.map((imageData) => (
+              <div className="w-full relative">
+                <img
+                  src={closeIcon}
+                  alt="closeIcon"
+                  className="absolute top-5 right-6 h-6 w-6 text-red-600 bg-white rounded-full p-1 cursor-pointer"
+                  onClick={() => {
+                    removeImageFromReview(imageData);
+                  }}
+                />
+
+                <img src={imageData} alt="imageData" className="rounded-lg" />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
