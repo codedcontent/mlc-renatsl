@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-const TextDataTextField = ({ fieldName, required, error, placeholder }) => {
+const TextDataTextField = ({
+  fieldName,
+  required,
+  error,
+  placeholder,
+  value,
+  formName,
+  handleChange,
+}) => {
   const [errorStyle, setErrorStyle] = useState({
     border: "border-gray-200",
     text: "text-secondary",
@@ -26,6 +34,7 @@ const TextDataTextField = ({ fieldName, required, error, placeholder }) => {
 
   return (
     <div className="w-full grid gap-1">
+      {/* Text field name */}
       <div className="flex gap-2 items-center">
         <span
           className={`font-semibold text-sm capitalize ${errorStyle.text} font-poppins`}
@@ -43,6 +52,10 @@ const TextDataTextField = ({ fieldName, required, error, placeholder }) => {
           type="text"
           className="h-full w-full grid place-items-center pl-4 bg-transparent outline-none font-inter text-sm"
           placeholder={placeholder}
+          value={value}
+          onChange={(e) => {
+            handleChange(formName, e.target.value);
+          }}
         />
       </div>
 

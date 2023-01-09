@@ -19,9 +19,9 @@ const App = () => {
 
       <NewProperty />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

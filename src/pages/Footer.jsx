@@ -87,8 +87,9 @@ const Footer = () => {
       <div className="border-t-[1px] mt-6 border-[#7BB9FC] w-[80%] m-auto py-2">
         <div className="flex gap-4 justify-between">
           <div className="mt-6 flex gap-6 w-full items-center">
-            {footerLinks.map((footerLink) => (
+            {footerLinks.map((footerLink, index) => (
               <a
+                key={index}
                 href={footerLink.url}
                 className="uppercase text-xs hover:text-accentColor cursor-pointer hover:font-semibold"
                 target="_blank"

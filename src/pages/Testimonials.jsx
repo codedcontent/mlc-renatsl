@@ -46,8 +46,9 @@ const Testimonials = () => {
 
           {/* Testimony counter circles */}
           <div className="flex gap-2 mt-6">
-            {appTestimonials.map((testimonial, index) => (
+            {appTestimonials.map((_, index) => (
               <div
+                key={index}
                 className={`rounded-full h-2 w-2 ${
                   index === 0 ? "bg-accentColor" : "bg-gray-300"
                 }`}
@@ -61,9 +62,8 @@ const Testimonials = () => {
           <iframe
             src="https://www.youtube.com/embed/InF16sp7J0M"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
             className="h-[480px] w-full object-cover"
           ></iframe>
         </div>

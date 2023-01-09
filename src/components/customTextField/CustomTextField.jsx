@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import TextDataTextField from "./TextDataTextField";
+import TextAreaTextField from "./TextAreaTextField";
 import PhotoTextField from "./PhotoTextField";
 import SelectDataTextField from "./SelectDataTextField";
-import TextAreaTextField from "./TextAreaTextField";
-import TextDataTextField from "./TextDataTextField";
 
 const CustomTextField = ({
   textType,
@@ -10,13 +10,12 @@ const CustomTextField = ({
   required,
   error,
   placeholder,
+  value,
+  handleChange,
+  formName,
+  parentData,
 }) => {
-  const [errorStyle, setErrorStyle] = useState({
-    border: "border-gray-200",
-    text: "text-secondary",
-    error: "",
-  });
-
+  // Text Content-Type Text Filed
   if (textType === "text") {
     return (
       <TextDataTextField
@@ -24,33 +23,53 @@ const CustomTextField = ({
         required={required}
         error={error}
         placeholder={placeholder}
+        value={value}
+        handleChange={handleChange}
+        formName={formName}
       />
     );
-  } else if (textType === "long") {
+  }
+  // Long Text Content-Type Text Filed
+  else if (textType === "long") {
     return (
       <TextAreaTextField
         fieldName={fieldName}
         required={required}
         error={error}
         placeholder={placeholder}
+        value={value}
+        handleChange={handleChange}
+        formName={formName}
       />
     );
-  } else if (textType === "photos") {
+  }
+
+  // Photo Content-Type Text Filed
+  else if (textType === "photos") {
     return (
       <PhotoTextField
         fieldName={fieldName}
         required={required}
         error={error}
         placeholder={placeholder}
+        value={value}
+        handleChange={handleChange}
+        formName={formName}
       />
     );
-  } else if (textType === "select") {
+  }
+  // Select Content-Type Text Filed
+  else if (textType === "select") {
     return (
       <SelectDataTextField
         fieldName={fieldName}
         required={required}
         error={error}
         placeholder={placeholder}
+        value={value}
+        handleChange={handleChange}
+        formName={formName}
+        parentData={parentData}
       />
     );
   }
