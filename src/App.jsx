@@ -8,14 +8,14 @@ import Testimonials from "./pages/Testimonials";
 
 const App = () => {
   return (
-    <div className="w-screen min-h-screen overflow-hidden pb-10 relative">
+    <div className="w-screen min-h-screen overflow-hidden pb-10 relative bg-gray-100">
       <Home />
 
-      <LivingCost />
+      <FlexibleOptions />
 
       <Properties />
 
-      <FlexibleOptions />
+      <LivingCost />
 
       <NewProperty />
 

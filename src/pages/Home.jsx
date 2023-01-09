@@ -12,9 +12,12 @@ const Home = () => {
     >
       <CustomAppBar />
 
-      <div className="flex justify-between items-center lg:px-32 gap-10">
-        <p className="text-5xl leading-tight font-bold w-1/2 text-white capitalize">
-          The most affordable place to stay in the san francisco bay area
+      <div className="flex justify-between items-center xl:px-32 lg:px-24 gap-10">
+        <p className="text-5xl leading-tight font-bold font-inter w-1/2 text-white capitalize">
+          Find the most affordable places to stay in Nigeria,{" "}
+          <span className="text-accentColor font-poppins">
+            the African Giant
+          </span>
         </p>
 
         <div className="space-y-6 w-1/2">

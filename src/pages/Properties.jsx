@@ -6,12 +6,12 @@ const Properties = () => {
   const [listOfHotelImages, setListOfHotelImages] = useState(null);
 
   useEffect(() => {
-    const getRentalImages = () => {
-      const API_KEY = import.meta.env.VITE_API_KEY;
-      const BASE_URL = "https://api.unsplash.com";
-      const numImages = 12;
-      const query = "resort rooms";
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const BASE_URL = "https://api.unsplash.com";
+    const numImages = 6;
+    const query = "resort rooms";
 
+    const getRentalImages = () => {
       // Make a request to the /search/photos endpoint
       fetch(
         `${BASE_URL}/search/photos?per_page=${numImages}&query=${query}&client_id=${API_KEY}`
@@ -25,11 +25,11 @@ const Properties = () => {
         });
     };
 
-    // getRentalImages();
+    getRentalImages();
   }, []);
 
   return (
-    <div className="min-h-screen w-full lg:p-24" id="#properties">
+    <div className="min-h-screen w-full lg:p-24" id="properties">
       <div className="flex w-full items-center justify-between">
         <div className="w-max">
           <span className="text-2xl font-inter font-bold capitalize">

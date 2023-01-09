@@ -28,7 +28,7 @@ const Footer = () => {
   return (
     <footer
       className="w-full lg:px-24 my-24 grid place-items-center"
-      id="#footer"
+      id="contact-us"
     >
       {/* Footer brand info */}
       <div className="flex justify-center items-center w-full mt-10 border-t-2 border-accentColor py-10">
@@ -91,7 +91,7 @@ const Footer = () => {
               <a
                 key={index}
                 href={footerLink.url}
-                className="uppercase text-xs hover:text-accentColor cursor-pointer hover:font-semibold"
+                className="uppercase text-xs hover:text-accentColor cursor-pointer hover:font-semibold text-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-6 flex gap-6 w-full items-center justify-end">
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-400 text-xs text-center">
               Copyright © 2020 Ogechukwu Mephors - MLC rentals. All rights
               reserved
             </p>

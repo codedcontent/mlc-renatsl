@@ -36,7 +36,7 @@ const livingFeatures = [
 
 const LivingCost = () => {
   return (
-    <div className="h-screen w-full lg:p-24" id="#features">
+    <div className="h-screen w-full lg:p-24" id="features">
       <div className="w-max">
         <span className="text-2xl font-inter font-bold capitalize">
           minimum living cost takes care of everything

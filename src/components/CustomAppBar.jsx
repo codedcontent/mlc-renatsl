@@ -3,16 +3,20 @@ import mlcLogo from "../assets/logo 1.svg";
 
 const navLinks = [
   {
-    title: "Home",
-    path: "/",
+    title: "List of properties",
+    path: "#properties",
   },
   {
-    title: "Landlord",
-    path: "#landlord",
+    title: "Features",
+    path: "#features",
   },
   {
-    title: "Tenants",
-    path: "#tenants",
+    title: "Add a property",
+    path: "#new-property",
+  },
+  {
+    title: "Testimonials",
+    path: "#testimonials",
   },
   {
     title: "Contact us",
@@ -37,7 +41,7 @@ const CustomAppBar = () => {
   }, []);
 
   return (
-    <div className="w-full h-20 lg:px-32 absolute top-0 left-0">
+    <div className="w-full h-20 xl:px-32 lg:px-24 fixed top-0 left-0 z-50">
       <div className="w-full border-b-white border-b-2 flex items-center justify-center h-full">
         <a href="/">
           <img
@@ -47,15 +51,18 @@ const CustomAppBar = () => {
           />
         </a>
 
-        <div className="flex justify-center lg:gap-14 h-full items-center flex-1">
+        <div className="flex justify-center lg:gap-2 h-full items-center flex-1">
           {navLinks.map((link, index) => {
             return (
               <a
                 key={index}
-                className={`h-full px-5 font-dm-sans grid text-center place-items-center text-white ${
+                className={`h-full px-5 font-dm-sans grid text-center place-items-center text-white xl:text-sm text-xs ${
                   currentSection === `${link.path}` &&
-                  "border-b-white border-b-2"
+                  "border-b-accentColor border-b-4 -mb-1 animate__animated animate__rubberBand"
                 }`}
+                style={{
+                  textShadow: "1px 1px 5px #F4511E",
+                }}
                 href={link.path}
               >
                 {link.title}

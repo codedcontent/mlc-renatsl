@@ -7,10 +7,7 @@ import CustomButton from "../components/CustomButton";
 
 const FlexibleOptions = () => {
   return (
-    <div
-      className="h-screen w-full lg:px-24 grid place-items-center"
-      id="#options"
-    >
+    <div className="h-screen w-full lg:px-24 grid place-items-center">
       {/* Flexibility options content */}
       <div className="flex w-full justify-between items-center h-full">
         {/* Flexibility options container */}

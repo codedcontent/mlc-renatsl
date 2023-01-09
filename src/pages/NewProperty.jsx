@@ -181,10 +181,10 @@ const NewProperty = () => {
 
   return (
     <div
-      className="min-h-screen w-full lg:px-24 pb-10 grid place-items-center"
-      id="#new-property"
+      className="min-h-screen w-full lg:px-24 grid gap-5 pt-4 place-items-center"
+      id="new-property"
     >
-      <p className="text-semibold text-xl font-inter capitalize">
+      <p className="text-semibold text-xl font-inter text-gray-700 capitalize">
         File your property with us and be Confident that Your Room will be
         Filled Out!
       </p>
