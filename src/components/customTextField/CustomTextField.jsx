@@ -14,6 +14,7 @@ const CustomTextField = ({
   handleChange,
   formName,
   parentData,
+  clearAnError,
 }) => {
   // Text Content-Type Text Filed
   if (textType === "text") {
@@ -26,6 +27,7 @@ const CustomTextField = ({
         value={value}
         handleChange={handleChange}
         formName={formName}
+        clearAnError={clearAnError}
       />
     );
   }
@@ -40,6 +42,7 @@ const CustomTextField = ({
         value={value}
         handleChange={handleChange}
         formName={formName}
+        clearAnError={clearAnError}
       />
     );
   }
@@ -55,6 +58,7 @@ const CustomTextField = ({
         value={value}
         handleChange={handleChange}
         formName={formName}
+        clearAnError={clearAnError}
       />
     );
   }
@@ -70,6 +74,7 @@ const CustomTextField = ({
         handleChange={handleChange}
         formName={formName}
         parentData={parentData}
+        clearAnError={clearAnError}
       />
     );
   }

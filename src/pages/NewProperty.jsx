@@ -9,12 +9,12 @@ const NewProperty = () => {
     name: "",
     address: "",
     houseNumber: "",
-    city: "",
     state: "",
+    city: "",
     roomType: "",
     price: "",
     description: "",
-    uploadedImage: "",
+    photos: "",
   });
 
   // The errors in the form
@@ -27,7 +27,7 @@ const NewProperty = () => {
     roomType: "",
     price: "",
     description: "",
-    uploadedImage: "",
+    photos: "",
   });
 
   // Handle form input changes as the user types
@@ -112,10 +112,71 @@ const NewProperty = () => {
     },
   ];
 
+  const clearAnError = (type) => {
+    setError((prev) => ({ ...prev, [type]: "" }));
+  };
+
+  const setAnError = (type) => {
+    setError((prev) => ({ ...prev, [type]: "Invalid data" }));
+  };
+
+  const validateForm = () => {
+    for (let i = 0; i < Object.entries(form).length; i++) {
+      const input = Object.entries(form)[i];
+
+      if (!input[1] || input[1]?.length <= 0) {
+        if (input[0] !== "photos") {
+          if (!input[1].trim()) {
+            setAnError(input[0]);
+            return false;
+          }
+        } else {
+          setAnError(input[0]);
+          return false;
+        }
+      } else {
+        clearAnError(input[0]);
+      }
+    }
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    console.log(form);
+
+    console.log("object");
+
+    const isValidForm = validateForm();
+
+    if (isValidForm) {
+      // Reset the form
+      setForm({
+        name: "",
+        address: "",
+        houseNumber: "",
+        state: "",
+        city: "",
+        roomType: "",
+        price: "",
+        description: "",
+        photos: "",
+      });
+
+      // Reset the form
+      setError({
+        name: "",
+        address: "",
+        houseNumber: "",
+        city: "",
+        state: "",
+        roomType: "",
+        price: "",
+        description: "",
+        photos: "",
+      });
+
+      alert("Property Added");
+    }
   };
 
   return (
@@ -152,6 +213,7 @@ const NewProperty = () => {
                   handleChange={inputDetail.handleChange}
                   formName={inputDetail.formName}
                   parentData={inputDetail.parentData}
+                  clearAnError={clearAnError}
                 />
               </div>
             ))}
@@ -160,23 +222,32 @@ const NewProperty = () => {
           {/* Property Description && Property images container */}
           <div className="space-y-6">
             <CustomTextField
-              error={""}
+              error={error.description}
               fieldName="Description"
               required={true}
               placeholder="Give us a brief description about what your needs may be?"
               textType={"long"}
+              handleChange={handleFormChange}
+              formName="description"
+              clearAnError={clearAnError}
             />
 
             <CustomTextField
-              error={""}
+              error={error.photos}
               fieldName="Upload photos"
               required={true}
               textType={"photos"}
+              handleChange={handleFormChange}
+              formName="photos"
+              clearAnError={clearAnError}
             />
           </div>
 
           <div className="grid mt-10 w-full place-items-center">
-            <CustomButton title={"Add New Property"} />
+            <CustomButton
+              title={"Add New Property"}
+              handleClick={handleSubmit}
+            />
           </div>
         </form>
       </div>

@@ -8,6 +8,7 @@ const TextDataTextField = ({
   value,
   formName,
   handleChange,
+  clearAnError,
 }) => {
   const [errorStyle, setErrorStyle] = useState({
     border: "border-gray-200",
@@ -55,6 +56,7 @@ const TextDataTextField = ({
           value={value}
           onChange={(e) => {
             handleChange(formName, e.target.value);
+            clearAnError(formName);
           }}
         />
       </div>

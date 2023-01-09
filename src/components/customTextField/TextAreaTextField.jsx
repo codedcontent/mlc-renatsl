@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const TextAreaTextField = ({ fieldName, required, error, placeholder }) => {
+const TextAreaTextField = ({
+  fieldName,
+  error,
+  placeholder,
+  handleChange,
+  formName,
+  clearAnError,
+}) => {
   const [errorStyle, setErrorStyle] = useState({
     border: "border-gray-200",
     text: "text-secondary",
@@ -43,6 +50,10 @@ const TextAreaTextField = ({ fieldName, required, error, placeholder }) => {
           type="text"
           className="h-14 w-full grid place-items-center p-4 bg-transparent outline-none font-inter text-sm"
           placeholder={placeholder}
+          onChange={(e) => {
+            handleChange(formName, e.target.value);
+            clearAnError(formName);
+          }}
         ></textarea>
       </div>
 

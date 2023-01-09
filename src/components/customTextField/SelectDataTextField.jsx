@@ -20,12 +20,12 @@ const allOptions = [
 
 const SelectDataTextField = ({
   fieldName,
-  required,
   error,
   placeholder,
   formName,
   parentData,
   handleChange,
+  clearAnError,
 }) => {
   /**
    * Higher Order Functions Start
@@ -56,6 +56,8 @@ const SelectDataTextField = ({
   // Handle what happens when the users click on the select input
   const handleSelectClick = () => {
     setSelectOpen(true);
+
+    clearAnError(formName);
   };
   // Handle what happens when the users click on an option
   const handleOptionClick = (optionValue) => {
