@@ -19,7 +19,7 @@ const Testimonials = () => {
           return prev + 1;
         }
       });
-    }, [5000]);
+    }, [3000]);
 
     return () => clearInterval(myInterval);
   }, []);
@@ -38,7 +38,8 @@ const Testimonials = () => {
                   className="flex-1 gap-6 flex flex-col relative md:mx-4 lg:ml-24"
                   key={index}
                 >
-                  <div className="flex flex-col gap-2">
+                  {/* Actual testimonies */}
+                  <div className="flex flex-col gap-2 animate__animated animate__bounceIn">
                     <img
                       src={singleQuote}
                       alt="singleQuote"
@@ -102,7 +103,7 @@ const Testimonials = () => {
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                className="h-[480px] w-full object-cover animate__animated animate__zoomInDown border-4 border-accentColor bg-accentColor"
+                className="h-[480px] w-[90%] object-cover animate__animated animate__zoomInDown border-4 border-accentColor bg-accentColor"
               ></iframe>
             ) : (
               <div
