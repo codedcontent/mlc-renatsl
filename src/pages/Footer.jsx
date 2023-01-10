@@ -31,7 +31,7 @@ const Footer = () => {
       id="contact-us"
     >
       {/* Footer brand info */}
-      <div className="flex justify-center items-center w-full mt-10 border-t-2 border-accentColor py-10">
+      <div className="flex justify-center items-center w-full mt-10 border-t-2 border-accentColor py-10 md:flex-row flex-col md:gap-0 gap-6">
         {/* Brand logo */}
         <div className="flex-1 items-center justify-center grid place-items-center">
           <div className="w-max bg-black text-white p-4 space-y-4 rounded-md">
@@ -85,7 +85,7 @@ const Footer = () => {
 
       {/* Footer helpful links and copyright */}
       <div className="border-t-[1px] mt-6 border-[#7BB9FC] w-[80%] m-auto py-2">
-        <div className="flex gap-4 justify-between">
+        <div className="flex gap-4 justify-between md:flex-row flex-col">
           <div className="mt-6 flex gap-6 w-full items-center">
             {footerLinks.map((footerLink, index) => (
               <a

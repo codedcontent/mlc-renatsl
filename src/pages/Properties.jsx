@@ -29,10 +29,14 @@ const Properties = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full lg:p-24" id="properties">
+    <div
+      className="min-h-screen w-full lg:p-24 md:px-12 px-6 pb-6 md:py-0 py-4"
+      id="properties"
+    >
+      {/* Main content text copy */}
       <div className="flex w-full items-center justify-between">
         <div className="w-max">
-          <span className="text-2xl font-inter font-bold capitalize">
+          <span className="md:text-2xl text-lg font-inter font-bold capitalize">
             list of properties
           </span>
 
@@ -42,7 +46,8 @@ const Properties = () => {
         <CustomButton title={"View All Property"} />
       </div>
 
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 gap-10 mt-4 place-items-center">
+      {/* List of properties */}
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-4 place-items-center">
         {listOfHotelImages?.length !== null && (
           <>
             {listOfHotelImages?.map((image) => (
@@ -52,24 +57,25 @@ const Properties = () => {
         )}
       </div>
 
+      {/* Pagination */}
       <div className="rounded-lg border-2 border-gray-200 w-max mt-10 m-auto items-center justify-center grid grid-cols-5 divide-x-2 h-12">
-        <p className="bg-gray-100 font-medium font-montserrat h-full px-5 flex justify-center items-center text-gray-400 cursor-pointer text-xs">
+        <p className="bg-gray-100 font-medium font-montserrat h-full md:px-5 px-2 flex justify-center items-center text-gray-400 cursor-pointer text-xs">
           First
         </p>
 
-        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+        <p className="bg-white font-medium font-montserrat h-full md:px-5 px-2 flex justify-center items-center text-accentColor cursor-pointer text-xs">
           1
         </p>
 
-        <p className="text-white font-medium font-montserrat h-full px-5 flex justify-center items-center bg-accentColor cursor-pointer text-xs">
+        <p className="text-white font-medium font-montserrat h-full md:px-5 px-2 flex justify-center items-center bg-accentColor cursor-pointer text-xs">
           2
         </p>
 
-        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
-          1
+        <p className="bg-white font-medium font-montserrat h-full md:px-5 px-2 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+          3
         </p>
 
-        <p className="bg-white font-medium font-montserrat h-full px-5 flex justify-center items-center text-accentColor cursor-pointer text-xs">
+        <p className="bg-white font-medium font-montserrat h-full md:px-5 px-2 flex justify-center items-center text-accentColor cursor-pointer text-xs">
           Last
         </p>
       </div>

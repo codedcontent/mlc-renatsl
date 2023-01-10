@@ -7,11 +7,11 @@ import CustomButton from "../components/CustomButton";
 
 const FlexibleOptions = () => {
   return (
-    <div className="h-screen w-full lg:px-24 grid place-items-center">
+    <div className="min-h-screen w-full lg:px-24 grid place-items-center h-max pb-6 overflow-hidden">
       {/* Flexibility options content */}
-      <div className="flex w-full justify-between items-center h-full">
-        {/* Flexibility options container */}
-        <div className="space-y-4 w-[35%] m-auto h-[80%]">
+      <div className="flex md:flex-row flex-col-reverse w-full justify-between items-center h-full md:px-0 px-6">
+        {/* Flexibility options images container */}
+        <div className="space-y-4 md:w-[35%] w-full m-auto h-[80%]">
           {/* Flexibility options - top container */}
           <div className="flex gap-4 h-[50%] w-full items-end">
             <div className="h-full w-[45%] rounded-xl relative">
@@ -26,7 +26,7 @@ const FlexibleOptions = () => {
               </p>
             </div>
 
-            <div className="w-[55%] h-[80%] rounded-xl relative">
+            <div className="w-[55%] md:h-[80%] h-full rounded-xl relative">
               <img
                 src={happyImage}
                 alt="bedRoomImage"
@@ -41,7 +41,7 @@ const FlexibleOptions = () => {
 
           {/* Flexibility options - bottom container */}
           <div className="flex gap-4 h-[50%] w-full items-start">
-            <div className="w-[40%] h-[80%] rounded-xl relative">
+            <div className="w-[40%] md:h-[80%] h-full rounded-xl relative">
               <img
                 src={cleaningImage}
                 alt="bedRoomImage"
@@ -67,21 +67,22 @@ const FlexibleOptions = () => {
           </div>
         </div>
 
-        <div className="w-1/2 grid gap-4">
-          <p className="font-black font-inter text-4xl leading-snug">
+        {/* Flexibility options main text container */}
+        <div className="md:w-1/2 w-full grid md:gap-4 gap-2 md:py-0 py-4">
+          <p className="font-black font-inter md:text-4xl text-3xl leading-snug">
             Flexibility and options to suit your lifestyle.
           </p>
 
-          <p className="font-inter text-lg">
+          <p className="font-inter md:text-lg">
             You need it? We got it. We make finding your next home easy,
             comfortable, and simple. From our happiness guarantee to our
             selective roommate finder option. We provide you the flexibility
             that you most desire.
           </p>
 
-          <div className="mt-10">
+          <a href="#properties" className="md:mt-10 mt-4 md:mb-0 mb-6">
             <CustomButton title={"Search Rooms"} />
-          </div>
+          </a>
         </div>
       </div>
     </div>

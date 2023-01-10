@@ -1,5 +1,5 @@
 import React from "react";
-import sectionImg from "../assets/section-1-img.png";
+import sectionImg from "../assets/building-unsplash.jpg";
 import dollarPayIcon from "../assets/dollar-pay-icon.svg";
 import communityIcon from "../assets/community-icon.svg";
 import stackIcon from "../assets/stack-icon.svg";
@@ -9,35 +9,38 @@ import eyeIcon from "../assets/eyes-icon.svg";
 
 const livingFeatures = [
   {
-    title: "Pay as Little as possible!",
+    title: "Affordable price range",
     icon: dollarPayIcon,
   },
   {
-    title: "Enjoy wisdom of community!",
+    title: "Enjoy the community",
     icon: communityIcon,
   },
   {
-    title: "Let's somebody else take care of Landlord!",
+    title: "You are the Landlord",
     icon: stackIcon,
   },
   {
-    title: "Enjoy peaceful Environment!",
+    title: "The Peaceful Environment",
     icon: flowerIcon,
   },
   {
-    title: "Stay Safe! Save Money!",
+    title: "Protect your investment",
     icon: shieldIcon,
   },
   {
-    title: "Pay for what you use!",
+    title: "Clientele focused",
     icon: eyeIcon,
   },
 ];
 
 const LivingCost = () => {
   return (
-    <div className="h-screen w-full lg:p-24" id="features">
-      <div className="w-max">
+    <div
+      className="h-max w-full lg:p-24 lg:py-0 md:py-6 md:px-12 px-6"
+      id="features"
+    >
+      <div className="w-full mb-4">
         <span className="text-2xl font-inter font-bold capitalize">
           minimum living cost takes care of everything
         </span>
@@ -45,21 +48,25 @@ const LivingCost = () => {
         <hr className="border-accentColor w-1/2 h-0.5 bg-accentColor" />
       </div>
 
-      <div className="w-full h-full flex space-x-5">
-        <img src={sectionImg} alt="sectionImg" className="W-12 bg-cover" />
+      <div className="w-full h-full flex md:flex-row flex-col gap-5">
+        <img
+          src={sectionImg}
+          alt="sectionImg"
+          className="md:w-1/2 w-[90%] m-auto md:h-full h-64 bg-cover flex-1 rounded-xl"
+        />
 
-        <div className="grid grid-cols-3 gap-10 place-content-center">
+        <div className="grid grid-cols-3 lg:gap-10 gap-5 place-content-center break-words flex-1">
           {livingFeatures.map((feature, index) => (
-            <div className="space-y-3 w-full" key={index}>
+            <div className="lg:space-y-3 w-full" key={index}>
               <div className="bg-white p-4 shadow-xl rounded-lg w-max">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="h-10 w-10"
+                  className="lg:h-10 md:h-6 lg:w-10 md:w-6"
                 />
               </div>
 
-              <p className="text-xl font-bold">{feature.title}</p>
+              <p className="lg:text-xl font-bold">{feature.title}</p>
             </div>
           ))}
         </div>

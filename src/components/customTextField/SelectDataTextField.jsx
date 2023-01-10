@@ -123,7 +123,7 @@ const SelectDataTextField = ({
         {selectOpen && (
           <div
             ref={selectRef}
-            className="absolute top-[105%] left-0 max-h-60 overflow-y-scroll bg-gray-200 w-full rounded-md divide-y divide-gray-100 grid grid-cols-1 shadow-2xl"
+            className="absolute top-[105%] left-0 max-h-60 overflow-y-scroll bg-gray-200 w-full rounded-md divide-y divide-gray-100 grid grid-cols-1 shadow-2xl z-50"
           >
             {formName === "state" ? (
               <>

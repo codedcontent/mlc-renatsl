@@ -25,28 +25,28 @@ const Testimonials = () => {
   }, []);
   return (
     <div
-      className="h-screen w-screen grid place-items-center"
+      className="min-h-screen relative w-screen grid place-items-center py-6"
       id="testimonials"
     >
-      <div className="h-max bg-accentColor/10">
-        <div className="w-screen h-max flex gap-5 justify-center items-center">
+      <div className="h-max relative left-0 top-0 bg-accentColor/10 md:px-12 px-6">
+        <div className="w-screen h-max flex md:flex-row flex-col gap-5 md:justify-center md:items-center m-auto">
           {/* Testimonials text content */}
           {appTestimonials.map((_, index) => (
             <>
               {index === currentTestimony && (
                 <div
-                  className="flex-1 gap-6 flex flex-col relative mx-4 ml-24"
+                  className="flex-1 gap-6 flex flex-col relative md:mx-4 lg:ml-24"
                   key={index}
                 >
-                  <div className="animate__animated animate__zoomIn">
+                  <div className="flex flex-col gap-2">
                     <img
                       src={singleQuote}
                       alt="singleQuote"
-                      className="absolute top-0 left-0 -translate-x-[80%] -translate-y-[55%] opacity-40"
+                      className="absolute top-0 left-0 -translate-x-[80%] -translate-y-[55%] opacity-40 md:h-20 md:w-20 h-10 w-10"
                     />
 
                     {/* Testimony text */}
-                    <p className="font-inter text-lg">
+                    <p className="font-inter text-lg md:w-full w-[90%]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam interdum nisl et nunc facilisis, a commodo eros
                       mollis. Nunc vel pellentesque est. Curabitur at odio sit
@@ -74,7 +74,7 @@ const Testimonials = () => {
                   </div>
 
                   {/* Testimony counter circles */}
-                  <div className="flex gap-2 mt-6">
+                  <div className="flex gap-2 md:mt-6 mt-4 md:justify-start justify-center">
                     {appTestimonials.map((_, index) => (
                       <div
                         key={index}
@@ -95,7 +95,7 @@ const Testimonials = () => {
           ))}
 
           {/* Testimony video playback */}
-          <div className="flex-1">
+          <div className="flex-1 w-[90%]">
             {userWantsToWatchVideo ? (
               <iframe
                 src="https://www.youtube.com/embed/InF16sp7J0M"
@@ -106,7 +106,7 @@ const Testimonials = () => {
               ></iframe>
             ) : (
               <div
-                className="w-full h-[480px] flex items-center justify-center cursor-pointer"
+                className="w-full h-[480px] flex items-center justify-center cursor-pointer relative"
                 onClick={() => {
                   setUserWantsToWatchVideo(true);
                 }}
@@ -117,8 +117,8 @@ const Testimonials = () => {
                   className="h-full w-full object-cover"
                 />
 
-                <p className="w-max absolute bg-accentColor text-white p-6 rounded-lg">
-                  Click me, then click me again to watch testimony video
+                <p className="w-[90%] m-auto absolute bg-accentColor text-white p-6 rounded-lg">
+                  Click me, then click again to watch testimony video 😊👍
                 </p>
               </div>
             )}

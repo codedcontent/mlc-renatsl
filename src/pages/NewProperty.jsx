@@ -181,10 +181,10 @@ const NewProperty = () => {
 
   return (
     <div
-      className="min-h-screen w-full lg:px-24 grid gap-5 pt-4 place-items-center"
+      className="min-h-screen w-full lg:px-24 md:px-12 px-6 grid gap-5 pt-4 place-items-center"
       id="new-property"
     >
-      <p className="text-semibold text-xl font-inter text-gray-700 capitalize">
+      <p className="text-semibold text-xl font-inter text-gray-700 capitalize text-center">
         File your property with us and be Confident that Your Room will be
         Filled Out!
       </p>
@@ -201,7 +201,7 @@ const NewProperty = () => {
         {/* Add a new property form */}
         <form className="w-full" onSubmit={handleSubmit}>
           {/* Name, Address, property number, property state, property city, room type */}
-          <div className="w-full grid grid-cols-3 gap-10 mb-8">
+          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mb-8">
             {formInputs.map((inputDetail, index) => (
               <div className="w-full" key={index}>
                 <CustomTextField

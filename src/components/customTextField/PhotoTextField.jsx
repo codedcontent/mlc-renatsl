@@ -109,7 +109,7 @@ const PhotoTextField = ({
           multiple
         />
 
-        <p className="font-bold font-poppins">
+        <p className="font-bold font-poppins text-center">
           Drag your images here,{" "}
           <span className="text-accentColor">or browse</span>
         </p>
@@ -144,7 +144,7 @@ const PhotoTextField = ({
                   key={index}
                   src={closeIcon}
                   alt="closeIcon"
-                  className="absolute top-5 right-6 h-6 w-6 text-red-600 bg-white rounded-full p-1 cursor-pointer"
+                  className="absolute top-5 right-6 h-6 w-6 text-red-600 bg-white rounded-full p-1 cursor-pointer hover:scale-110"
                   onClick={() => {
                     removeImageFromReview(imageData);
                   }}
