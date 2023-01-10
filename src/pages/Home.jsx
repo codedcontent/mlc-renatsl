@@ -3,19 +3,21 @@ import CustomAppBar from "../components/CustomAppBar";
 import mapImg from "../assets/GoogleMapTA.jpg";
 import arrowDownIcon from "../assets/arrow-down-icon.svg";
 import searchIcon from "../assets/search icon.svg";
+import heroImg from "../assets/hero_img.png";
 
 const Home = () => {
   return (
-    <div className="relative bg-hero-pattern bg-cover min-h-screen pb-4 w-full grid place-items-center">
+    <div
+      className="relative bg-cover min-h-screen pb-4 w-full grid place-items-center"
+      style={{ backgroundImage: `url(${heroImg})` }}
+    >
       <CustomAppBar />
 
       {/* main content */}
       <main className="flex md:flex-row flex-col justify-between items-center xl:px-32 lg:px-24 md:px-12 px-6 md:gap-10 gap-5 md:mt-0 mt-20 md:text-left text-center">
         <p className="lg:text-5xl md:text-4xl text-3xl leading-tight font-bold font-inter md:w-1/2 w-full text-white capitalize">
           Find the most affordable places to stay in Nigeria,{" "}
-          <span className="text-accentColor font-poppins">
-            the African Giant
-          </span>
+          <span className="text-[#FF792D] font-poppins">the African Giant</span>
         </p>
 
         <div className="space-y-6 md:w-1/2 w-full">

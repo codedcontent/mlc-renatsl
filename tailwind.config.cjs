@@ -7,9 +7,6 @@ module.exports = {
         accentColor: "#F4511E",
         secondary: "#252B42",
       },
-      backgroundImage: {
-        "hero-pattern": "url(/hero img.png)",
-      },
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
