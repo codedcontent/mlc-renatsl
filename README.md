@@ -8,3 +8,8 @@ Made using
 
     - React
     - Tailwind
+    - 
+
+## Live Demo
+
+Site is live at <https://mlc-rentals.netlify.app/>
